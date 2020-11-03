@@ -26,7 +26,29 @@ void zmiana (int *x, int *y)
     swap(*x,*y);
 }
 ```
-#### Zadanie 1
+#### Zadanie 2
 ```cpp
+#include <iostream>
+using namespace std;
 
+void Swap(int *a, int *b)
+{
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+int main()
+{
+    cout<<"Vadym Kochenko Lab 2 Zadanie 2"<<endl;
+    int a, b;
+    cout<<"Prosze podac dwie liczby do zamiany:";
+    cin>>a>>b;
+    cout<<"a="<<a<<endl;
+    cout<<"b="<<b<<endl;
+    cout<<"Swap"<<endl;
+    Swap(&a, &b);
+    cout<<"a="<<a<<endl;
+    cout<<"b="<<b<<endl;
+}
 ```
