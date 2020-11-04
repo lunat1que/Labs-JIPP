@@ -91,7 +91,7 @@ void foo(int &a, int &b)
 
 int main()
 {
-    cout<<"Vadym Kochenko Lab 4 Zadanie 2"<<endl;
+    cout<<"Vadym Kochenko Lab 2 Zadanie 4"<<endl;
     int a, b;
     cout<<"Prosze podac dwie liczby do obliczenia:";
     cin>>a>>b;
@@ -101,5 +101,27 @@ int main()
     cout<<"Wyniky:"<<endl;
     cout<<"a="<<a<<endl;
     cout<<"b="<<b<<endl;
+}
+```
+#### Zadanie 5
+```cpp
+```
+### Zadanie 6
+```cpp
+#include <iostream>
+ 
+using namespace std;
+ 
+int main()
+{
+    int x, y;
+    cout<<"Vadym Kochenko Lab 2 Zadanie 6"<<endl;
+    cout<<"Prosze podac dwie liczby do zamiany"<<endl;
+    cin>>x>>y;
+    x = x ^ y; 
+    y = x ^ y; 
+    x = x ^ y;
+    cout << "Po zamianie:" << endl <<" x =" << x << endl << " y =" << y;
+    return 0;
 }
 ```
