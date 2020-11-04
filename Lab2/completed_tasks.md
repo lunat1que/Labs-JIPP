@@ -66,7 +66,7 @@ void Swap(int &a_ref, int *b)
 
 int main()
 {
-    cout<<"Vadym Kochenko Lab 3 Zadanie 2"<<endl;
+    cout<<"Vadym Kochenko Lab 2 Zadanie 3"<<endl;
     int a, b;
     cout<<"Prosze podac dwie liczby do zamiany:";
     cin>>a>>b;
