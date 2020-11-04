@@ -78,3 +78,28 @@ int main()
     cout<<"b="<<b<<endl;
 }
 ```
+#### Zadanie 4
+```cpp
+#include <iostream>
+using namespace std;
+
+void foo(int &a, int &b)
+{
+    a = a*b;
+    b = a/b+b;
+}
+
+int main()
+{
+    cout<<"Vadym Kochenko Lab 4 Zadanie 2"<<endl;
+    int a, b;
+    cout<<"Prosze podac dwie liczby do obliczenia:";
+    cin>>a>>b;
+    cout<<"a="<<a<<endl;
+    cout<<"b="<<b<<endl;
+    foo(a, b);
+    cout<<"Wyniky:"<<endl;
+    cout<<"a="<<a<<endl;
+    cout<<"b="<<b<<endl;
+}
+```
