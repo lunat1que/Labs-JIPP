@@ -31,11 +31,11 @@ void zmiana (int *x, int *y)
 #include <iostream>
 using namespace std;
 
-void Swap(int *a, int *b)
+void Swap(int &a_ref, int &b_ref)
 {
-    int temp = *a;
-    *a = *b;
-    *b = temp;
+    int temp = a_ref;
+    a_ref = b_ref;
+    b_ref = temp;
 }
 
 int main()
@@ -47,7 +47,7 @@ int main()
     cout<<"a="<<a<<endl;
     cout<<"b="<<b<<endl;
     cout<<"Swap"<<endl;
-    Swap(&a, &b);
+    Swap(a, b);
     cout<<"a="<<a<<endl;
     cout<<"b="<<b<<endl;
 }
