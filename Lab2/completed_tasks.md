@@ -52,3 +52,29 @@ int main()
     cout<<"b="<<b<<endl;
 }
 ```
+#### Zadanie 3
+```cpp
+#include <iostream>
+using namespace std;
+
+void Swap(int &a_ref, int *b)
+{
+    int temp = a_ref;
+    a_ref = *b;
+    *b = temp;
+}
+
+int main()
+{
+    cout<<"Vadym Kochenko Lab 3 Zadanie 2"<<endl;
+    int a, b;
+    cout<<"Prosze podac dwie liczby do zamiany:";
+    cin>>a>>b;
+    cout<<"a="<<a<<endl;
+    cout<<"b="<<b<<endl;
+    cout<<"Swap"<<endl;
+    Swap(a, &b);
+    cout<<"a="<<a<<endl;
+    cout<<"b="<<b<<endl;
+}
+```
