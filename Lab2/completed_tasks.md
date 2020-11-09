@@ -105,6 +105,67 @@ int main()
 ```
 #### Zadanie 5
 ```cpp
+#include <iostream>
+using namespace std;
+template < typename T > void swap(T* px, T* py){
+    T temp = *px;
+    *px = *py;
+    *py = temp;
+}
+
+void zamiana_int(){
+    int x, y;
+    cout << "Podaj dwie liczby typu int:";
+    cout << "x = ";
+    cin >> x;
+    cout << "y = ";
+    cin >> y;
+
+    swap(&x, &y);
+
+    cout << "x = " << x << endl;
+    cout << "y = " << y << endl; 
+}
+
+void zamiana_double(){
+    double d, f;
+    cout << "Podaj dwie liczby typu double:";
+    cout << "x = ";
+    cin >> d;
+    cout << "y = ";
+    cin >> f;
+
+    swap(&d, &f);
+
+    cout << "x = " << d << endl;
+    cout << "y = " << f << endl;
+}   
+
+void zamiana_char(){
+    char c1, c2;
+    cout << "Podaj dwa argumenty typu char:";
+    cout << "x = ";
+    cin >> c1;
+    cout << "y = ";
+    cin >> c2;
+
+    swap(&c1, &c2);
+
+    cout << "x = " << c1 << endl;
+    cout << "y = " << c2 << endl;
+}
+
+int main(){
+    cout<<"Vadym Kochenko Lab 2 Zadanie 5"<<endl;
+    int z;
+    cout<<"Podaj jaki typ potrzebujesz(int(pisz 1), double(pisz 2), char(pisz 3):";
+    cin>>z;
+    if(z==1){
+    zamiana_int();
+    } else if(z==2){
+       zamiana_double(); 
+    }else zamiana_char();
+}
 ```
 ### Zadanie 6
 ```cpp
