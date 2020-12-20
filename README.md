@@ -1,5 +1,1 @@
 # Labs JIPP
-
-
-
-VADYM KOCHENKO
