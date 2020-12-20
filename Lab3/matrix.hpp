@@ -20,7 +20,7 @@ public:
     //Konstruktor przyjmujacy sciezke do pliku oraz tworzacy nowa macierz na podstawie przekazanego pliku 
     Matrix(string path);
      
-    //Metoda ustawiajaca wartosc elementu (N, M) macierzy na Va
+    //Metoda ustawiajaca wartosc elementu (N, M) macierzy na Val
     void set(int N, int M, double Val);
     
     //Metoda pobierajaca element (N, M) macierzy
