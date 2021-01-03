@@ -1,7 +1,7 @@
 cmake_minimum_required( VERSION 3.0 )
 
-project( HR_Lab3 )
+project( HR )
 
-include_directories( )
+include_directories( ./src ./include)
 
-add_executable(  )
+add_executable(test ./src/main.cpp ./src/employee.cpp ./src/hrms.cpp)
