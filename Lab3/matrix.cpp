@@ -1,19 +1,22 @@
 #include "matrix.hpp"
 using namespace std;
 
+
 Matrix::Matrix(int N, int M){
     if (N > 0 && M > 0){
         m_N = N;
         m_M = M;
+
         matrix = new double* [M];
         for (int i = 0; i < N; i++)
             matrix[i] = new double[N];
+        
         for (int i = 0; i < N; i++)
             for (int j = 0; j < M; j++)
                 matrix[i][j] = 0;
     }
     else{
-        cout << "Bląd nie mozna stworzyc macierz o podanych wymiarach.\n";
+        cout << "Blad tworzenia macierzy o podanych wymiarach.\n";
         exit(0);
     }
 }
@@ -32,7 +35,7 @@ Matrix::Matrix(int N){
                 matrix[i][j] = 0;
     }
     else{
-        cout << "Bląd nie mozna stworzyc macierz o podanym wymiarze.\n";
+        cout << "Blad tworzenia macierzy o podanym wymiarze.\n";
         exit(1);
     }
 }
@@ -55,7 +58,7 @@ Matrix::Matrix(string path){
         file.close();
     }
     else{
-        cout << "Bląd nie udalo sie otworzyc plik.\n";
+        cout << "Blad otwierania pliku.\n";
         exit(8);
     }
 }
@@ -65,7 +68,7 @@ void Matrix::set(int N, int M, double Val){
         matrix[N - 1][M - 1] = Val;
     }
     else{
-        cout << "Bląd nie mozna ustawic wartosc elementu o podanej pozycji.\n";
+        cout << "Blad ustawienia wartosci elementu o podanej pozycji.\n";
         exit(2);
     }
 }
@@ -75,7 +78,7 @@ double Matrix::get(int N, int M){
         return matrix[N - 1][M - 1];
     }
     else{
-        cout << "Bląd nie mozna pobrac elementu o podanej pozycji.\n";
+        cout << "Blad pobrania elementu o podanej pozycji.\n";
         exit(3);
     }
 }
@@ -91,7 +94,7 @@ Matrix Matrix::add(Matrix& m2){
         return sum;
     }
     else{
-        cout << "Bląd nie mozna dodac macierzy ktore maja rozne wymiary.\n";
+        cout << "Blad, macierzy maja rozne wymiary.\n";
         exit(4);
     }
 }
@@ -107,7 +110,7 @@ Matrix Matrix::substract(Matrix& m2){
         return difference;
     }
     else{
-        cout << "Bląd nie mozna odjac macierzy ktore maja rozne wymiary.\n";
+        cout << "Blad, odejmowanie macierzy ktore maja rozne wymiary jest niemozliwie.\n";
         exit(5);
     }
 }
@@ -124,7 +127,7 @@ Matrix Matrix::multiply(Matrix& m2){
         return product;
     }
     else{
-        cout << "Bląd nie mozna pomnozyc macierzy ktore maja nieodpowiednie wymiary.\n";
+        cout << "Blad, mnozenie macierzy ktore maja nieodpowiednie wymiary jest niemozliwie.\n";
         exit(6);
     }
 }
@@ -162,7 +165,7 @@ void Matrix::store(string filename, string path){
         file.close();
     }
     else{
-        cout << "Bląd nie udalo sie stworzyc plik.\n";
+        cout << "Blad tworzenia pliku.\n";
         exit(7);
     }
 }
