@@ -1,4 +1,4 @@
-#include "matrix.cpp"
+#include "matrix.hpp"
 #include <time.h>
 using namespace std;
 
